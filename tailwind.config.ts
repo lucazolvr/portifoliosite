@@ -35,18 +35,9 @@ const config: Config = {
   					transform: 'translateY(-10px)'
   				}
   			},
-  			moveClouds: {
-  				'0%': {
-  					transform: 'translateX(100%)'
-  				},
-  				'100%': {
-  					transform: 'translateX(-100%)'
-  				}
-  			}
   		},
   		animation: {
   			float: 'float 3s ease-in-out infinite',
-  			cloud: 'moveClouds 10s linear infinite'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

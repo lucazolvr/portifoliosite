@@ -2,7 +2,7 @@ import memojiImage from '@/assets/images/memoji- notebook.png';
 import Image from 'next/image';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import grainImage from '@/assets/images/grain.jpg';
-import CloudIcon from '@/assets/icons/two-black-clouds-shapes-svgrepo-com.svg'
+import SpaceshipIncon from '@/assets/icons/space-ship-space-svgrepo-com.svg'
 import { HeroOrbit } from '@/components/HeroOrbit';
 
 export const HeroSection = () => {
@@ -17,8 +17,8 @@ export const HeroSection = () => {
     <div className="size-[820px] hero-ring"></div>
     <div className="size-[1020px] hero-ring"></div>
     <div className="size-[1220px] hero-ring"></div>
-    <HeroOrbit size={800}>
-      {/* <CloudIcon className="size-28 fill-current text-gray-100"/> */}
+    <HeroOrbit size={800} rotation={0}>
+      <SpaceshipIncon className="size-28 fill-current text-gray-100"/>
       </HeroOrbit>
     <div className="container">
       <div className="flex flex-col items-center">
