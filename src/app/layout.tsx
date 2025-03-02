@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Calistoga } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
+import { ShootingStars } from "@/components/shooting-stars";
+import { StarsBackground } from "@/components/stars-background";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistoga = Calistoga({
@@ -26,10 +28,16 @@ export default function RootLayout({
         className={twMerge(
           inter.variable,
           calistoga.variable,
-          "bg-gradient-to-br from-red-500 to-orange-500 text-white antialiased font-sans"
+          "bg-gray-900 text-white antialiased font-sans"
         )}
       >
-        {children}
+        <div className="relative h-screen">
+          {/* Fundo com Estrelas e Estrelas Cadentes */}
+          <StarsBackground className="z-0" />
+          <ShootingStars className="z-0" />
+          {/* Conteúdo */}
+          <div className="relative z-10">{children}</div>
+        </div>
       </body>
     </html>
   );

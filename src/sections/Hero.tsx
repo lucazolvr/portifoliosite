@@ -18,12 +18,12 @@ export const HeroSection = () => {
     <div className="size-[1020px] hero-ring"></div>
     <div className="size-[1220px] hero-ring"></div>
     <HeroOrbit size={800}>
-      <CloudIcon className="size-28 fill-current text-gray-100"/>
+      {/* <CloudIcon className="size-28 fill-current text-gray-100"/> */}
       </HeroOrbit>
     <div className="container">
       <div className="flex flex-col items-center">
       <Image src={memojiImage} className="size-[100px]" alt='lucas usando notebook' />
-      <div className="bg-orange-800 border border-orange-700 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
+      <div className="bg-gray-900 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
         <div className="absolute bg-green-400 size-2.5 animate-ping rounded-full opacity-75"></div>
         <div className="bg-green-500 size-2.5 rounded-full"></div>
         <div className="text-sm font-medium">Disponível para trabalhos</div>
@@ -45,7 +45,7 @@ export const HeroSection = () => {
           <span className="font-semibold">Explore Meu Portifólio</span>
           <ArrowDown className="size-4"/>
         </button>
-        <button className="inline-flex items-center gap-2 border border-white bg-white text-orange-900 h-12 px-6 rounded-xl">
+        <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
           <span>👋</span>
           <span className="font-semibold">Vamos Conversar</span>
         </button>
