@@ -3,6 +3,7 @@ import Image from 'next/image';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import grainImage from '@/assets/images/grain.jpg';
 import CloudIcon from '@/assets/icons/two-black-clouds-shapes-svgrepo-com.svg'
+import { HeroOrbit } from '@/components/HeroOrbit';
 
 export const HeroSection = () => {
   return (
@@ -16,16 +17,13 @@ export const HeroSection = () => {
     <div className="size-[820px] hero-ring"></div>
     <div className="size-[1020px] hero-ring"></div>
     <div className="size-[1220px] hero-ring"></div>
-    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border border-red-500 size-[800px]">
-      <div className="border border-red-500 inline-flex animate-float [animation-duration:5s]">
-      <CloudIcon className="size-28 fill-current text-blue-200"/>
-      </div>
-    </div>
-
+    <HeroOrbit size={800}>
+      <CloudIcon className="size-28 fill-current text-gray-100"/>
+      </HeroOrbit>
     <div className="container">
       <div className="flex flex-col items-center">
       <Image src={memojiImage} className="size-[100px]" alt='lucas usando notebook' />
-      <div className="bg-blue-950 border border-blue-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
+      <div className="bg-orange-800 border border-orange-700 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
         <div className="absolute bg-green-400 size-2.5 animate-ping rounded-full opacity-75"></div>
         <div className="bg-green-500 size-2.5 rounded-full"></div>
         <div className="text-sm font-medium">Disponível para trabalhos</div>
@@ -47,7 +45,7 @@ export const HeroSection = () => {
           <span className="font-semibold">Explore Meu Portifólio</span>
           <ArrowDown className="size-4"/>
         </button>
-        <button className="inline-flex items-center gap-2 border border-white bg-white text-blue-900 h-12 px-6 rounded-xl">
+        <button className="inline-flex items-center gap-2 border border-white bg-white text-orange-900 h-12 px-6 rounded-xl">
           <span>👋</span>
           <span className="font-semibold">Vamos Conversar</span>
         </button>

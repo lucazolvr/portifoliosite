@@ -21,7 +21,7 @@ const config: Config = {
       },
     },
     extend: {
-      fontFamily:{
+      fontFamily: {
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)',
       },
@@ -30,12 +30,18 @@ const config: Config = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+        moveClouds: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
         float: 'float 3s ease-in-out infinite',
+        cloud: 'moveClouds 10s linear infinite',
       },
     },
   },
   plugins: [],
 };
+
 export default config;
