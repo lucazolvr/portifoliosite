@@ -2,7 +2,8 @@ import memojiImage from '@/assets/images/memoji- notebook.png';
 import Image from 'next/image';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import grainImage from '@/assets/images/grain.jpg';
-import SpaceshipIncon from '@/assets/icons/space-ship-space-svgrepo-com.svg'
+import SpaceshipIncon from '@/assets/icons/space-ship-space-svgrepo-com.svg';
+import UfoImage from '@/assets/icons/noun-ufo-6642260.svg';
 import { HeroOrbit } from '@/components/HeroOrbit';
 
 export const HeroSection = () => {
@@ -17,9 +18,31 @@ export const HeroSection = () => {
     <div className="size-[820px] hero-ring"></div>
     <div className="size-[1020px] hero-ring"></div>
     <div className="size-[1220px] hero-ring"></div>
-    <HeroOrbit size={800} rotation={0}>
-      <SpaceshipIncon className="size-28 fill-current text-gray-100"/>
+    <HeroOrbit size={720} rotation={-72}>
+      <SpaceshipIncon className="size-16 fill-current text-teal-300"/>
       </HeroOrbit>
+    <HeroOrbit size={550} rotation={-14}>
+      <SpaceshipIncon className="size-12 fill-current text-teal-300/75"/>
+      </HeroOrbit>
+    <HeroOrbit size={590} rotation={102}>
+      <SpaceshipIncon className="size-8 fill-current text-teal-300/70"/>
+      </HeroOrbit>
+    <HeroOrbit size={430} rotation={10}>
+      <UfoImage className="size-8 fill-current text-emerald-300/20"/>
+      </HeroOrbit>
+    <HeroOrbit size={440} rotation={74}>
+      <UfoImage className="size-5 fill-current text-emerald-300/20 rotate-180"/>
+      </HeroOrbit>
+    <HeroOrbit size={530} rotation={180}>
+      <UfoImage className="size-10 fill-current text-emerald-300/20 -rotate-45"/>
+      </HeroOrbit>
+    <HeroOrbit size={710} rotation={136}>
+      <UfoImage className="size-14 fill-current text-emerald-300/20"/>
+      </HeroOrbit>
+
+
+
+
     <div className="container">
       <div className="flex flex-col items-center">
       <Image src={memojiImage} className="size-[100px]" alt='lucas usando notebook' />
