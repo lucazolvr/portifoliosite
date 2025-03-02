@@ -9,6 +9,7 @@ import { HeroOrbit } from '@/components/HeroOrbit';
 export const HeroSection = () => {
   return (
   <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+     <div className='absolute inset-0 [mask-image:linear-gradient(to-bottom,transparent,black_10%,black_70%,transparent)]'>
     <div className="absolute inset-0 -z-30 opacity-5"
      style={{
       backgroundImage: `url(${grainImage.src})`,
@@ -39,14 +40,23 @@ export const HeroSection = () => {
     <HeroOrbit size={710} rotation={136}>
       <UfoImage className="size-14 fill-current text-emerald-300/20"/>
       </HeroOrbit>
-
+    <HeroOrbit size={720} rotation={85}>
+      <div className="size-3 rounded-full bg-emerald-300/20"/>
+      </HeroOrbit>
+    <HeroOrbit size={520} rotation={-41}>
+      <div className="size-2 rounded-full bg-emerald-300/20"/>
+      </HeroOrbit>
+    <HeroOrbit size={650} rotation={-5}>
+      <div className="size-3 rounded-full bg-emerald-300/20"/>
+      </HeroOrbit>
+      </div>
 
 
 
     <div className="container">
       <div className="flex flex-col items-center">
       <Image src={memojiImage} className="size-[100px]" alt='lucas usando notebook' />
-      <div className="bg-gray-900 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
+      <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
         <div className="absolute bg-green-400 size-2.5 animate-ping rounded-full opacity-75"></div>
         <div className="bg-green-500 size-2.5 rounded-full"></div>
         <div className="text-sm font-medium">Disponível para trabalhos</div>

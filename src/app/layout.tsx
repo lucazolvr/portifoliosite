@@ -32,10 +32,10 @@ export default function RootLayout({
         )}
       >
         <div className="relative h-screen">
-          {/* Fundo com Estrelas e Estrelas Cadentes */}
+          {}
           <StarsBackground className="z-0" />
           <ShootingStars className="z-0" />
-          {/* Conteúdo */}
+          {}
           <div className="relative z-10">{children}</div>
         </div>
       </body>
