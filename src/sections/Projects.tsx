@@ -4,7 +4,7 @@ import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
+    company: "AIACON Software",
     year: "2022",
     title: "Dark Saas Landing Page",
     results: [
@@ -16,7 +16,7 @@ const portfolioProjects = [
     image: darkSaasLandingPage,
   },
   {
-    company: "Innovative Co",
+    company: "AIACON Software",
     year: "2021",
     title: "Light Saas Landing Page",
     results: [
@@ -28,7 +28,7 @@ const portfolioProjects = [
     image: lightSaasLandingPage,
   },
   {
-    company: "Quantum Dynamics",
+    company: "AIACON software house",
     year: "2023",
     title: "AI Startup Landing Page",
     results: [
@@ -42,5 +42,21 @@ const portfolioProjects = [
 ];
 
 export const ProjectsSection = () => {
-  return <div>Projects Section</div>;
+  return <div>
+    <div className="container">
+      <p>Resultados Reais</p>
+      <h2>Projetos realizados</h2>
+      <p>Veja como posso transformar simples pensamentos em coisas grandiosas.</p>
+      <div>
+        {portfolioProjects.map(project =>(
+          <div key={project.title}>
+            <div>
+              <span>{project.company}</span>
+              <span>{project.year}</span>
+              </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>;
 };
