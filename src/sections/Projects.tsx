@@ -1,6 +1,7 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import CodeEduSaas from "@/assets/images/CodeEduSaas.png";
+import CitrusTaskSaas from "@/assets/images/CitrusTaskSaas.png";
+import AiaconFintechSaas from "@/assets/images/AiaconFintechSaas.png";
+import Image from "next/image";
 
 const portfolioProjects = [
   {
@@ -12,8 +13,8 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://github.com/lucazolvr",
+    image: CodeEduSaas,
   },
   {
     company: "AIACON Software",
@@ -24,8 +25,8 @@ const portfolioProjects = [
       { title: "Expanded customer reach by 35%" },
       { title: "Increased brand awareness by 15%" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://github.com/lucazolvr",
+    image: CitrusTaskSaas,
   },
   {
     company: "AIACON software house",
@@ -36,24 +37,39 @@ const portfolioProjects = [
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://github.com/lucazolvr",
+    image: AiaconFintechSaas,
   },
 ];
 
 export const ProjectsSection = () => {
   return <div>
     <div className="container">
-      <p>Resultados Reais</p>
-      <h2>Projetos realizados</h2>
-      <p>Veja como posso transformar simples pensamentos em coisas grandiosas.</p>
+      <div className="flex justify-center ">
+      <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-purple-300 via-sky-400 to-teal-400 text-center text-transparent bg-clip-text">
+        Resultados Reais
+      </p>
+      </div>
+      <h2>Projetos em Destaque</h2>
+      <p>Veja como posso transformar simples pensamentos em grandes projetos.</p>
       <div>
-        {portfolioProjects.map(project =>(
+        {portfolioProjects.map((project) =>(
           <div key={project.title}>
-            <div>
-              <span>{project.company}</span>
-              <span>{project.year}</span>
+              <div>
+                <span>{project.company}</span>
+                <span>{project.year}</span>
               </div>
+              <h3>{project.title}</h3>
+              <hr />
+              <ul>
+                {project.results.map((result) =>(
+                  <li>{result.title}</li>
+                ))}
+              </ul>
+              <a href="{project.link}">
+              <button>Abrir Projeto</button>
+              </a>
+              <Image src={project.image} alt={project.title}/>
           </div>
         ))}
       </div>
