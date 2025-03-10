@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, Calistoga } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import { ShootingStars } from "@/components/shooting-stars";
 import { StarsBackground } from "@/components/stars-background";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const calistoga = Calistoga({
+const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-serif",
-  weight: ["400"],
+  weight: ["800"],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={twMerge(
           inter.variable,
-          calistoga.variable,
+          poppins.variable,
           "bg-gray-900 text-white antialiased font-sans"
         )}
       >
