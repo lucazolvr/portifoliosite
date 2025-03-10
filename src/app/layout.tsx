@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-serif",
-  weight: ["800"],
+  weight: ["700"],
 });
 
 export const metadata: Metadata = {
