@@ -11,39 +11,42 @@ import JavaIcon from "@/assets/icons/icons8-java.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import SpringIcon from "@/assets/icons/spring.svg";
 import SqlIcon from "@/assets/icons/database.svg";
+import { TechIcon } from "@/components/TechIcon";
+import mapImage from "@/assets/images/mapa.png";
+import smileMemoji from "@/assets/images/memoji-piscando.png";
 
 const toolboxItems = [
   {
     title: "JavaScript",
-    icon: <JavascriptIcon />,
+    iconType: JavascriptIcon,
   },
   {
     title: "HTML5",
-    icon: <HTMLIcon />,
+    iconType: HTMLIcon,
   },
   {
     title: "CSS3",
-    icon: <CSSIcon />,
+    iconType: CSSIcon,
   },
   {
     title: "React",
-    icon: <ReactIcon />,
+    iconType: ReactIcon,
   },
   {
     title: "Java",
-    icon: <JavaIcon />,
+    iconType: JavaIcon,
   },
   {
     title: "Github",
-    icon: <GithubIcon />,
+    iconType: GithubIcon,
   },
   {
     title: "SpringBoot",
-    icon: <SpringIcon />,
+    iconType: SpringIcon,
   },
   {
     title: "Banco de Dados",
-    icon: <SqlIcon />,
+    iconType: SqlIcon,
   },
 ];
 
@@ -76,10 +79,22 @@ export const AboutSection = () => {
           <div>
             {toolboxItems.map((item) => (
               <div key={item.title}>
-                <span>{item.icon}</span>
+                <TechIcon component={item.iconType} />
+                <span>{item.title}</span>
               </div>
             ))}
           </div>
+        </Card>
+        <Card>
+          <div>
+            <StarIcon />
+            <h3>Além do Código</h3>
+            <p>Explore meus interesses e hobbys além do universo de códigos.</p>
+          </div>
+        </Card>
+        <Card>
+          <Image src={mapImage} alt="mapa" />
+          <Image src={smileMemoji} alt="Memoji Piscando" />
         </Card>
       </div>
     </div>
