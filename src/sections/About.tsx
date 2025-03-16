@@ -73,7 +73,13 @@ export const AboutSection = () => {
               projetos incríveis.
             </p>
           </div>
-          <div></div>
+          <div>
+            {toolboxItems.map((item) => (
+              <div key={item.title}>
+                <span>{item.icon}</span>
+              </div>
+            ))}
+          </div>
         </Card>
       </div>
     </div>
