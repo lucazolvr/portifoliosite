@@ -3,46 +3,49 @@ import { Card } from "@/components/Card";
 import StarIcon from "@/assets/icons/star.svg";
 import bookImage from "@/assets/images/LivroArqSoftw.png";
 import Image from "next/image";
-import JavascriptIcon from "@/assets/icons/square-js.svg"
-import HTMLIcon from "@/assets/icons/html5.svg"
-import CSSIcon from "@/assets/icons/css3.svg"
-import ReactIcon from "@/assets/icons/react.svg"
-import JavaIcon from "@/assets/icons/icons8-java.svg"
-import GithubIcon from "@/assets/icons/github.svg"
-import SpringIcon from "@/assets/icons/spring.svg"
-
+import JavascriptIcon from "@/assets/icons/square-js.svg";
+import HTMLIcon from "@/assets/icons/html5.svg";
+import CSSIcon from "@/assets/icons/css3.svg";
+import ReactIcon from "@/assets/icons/react.svg";
+import JavaIcon from "@/assets/icons/icons8-java.svg";
+import GithubIcon from "@/assets/icons/github.svg";
+import SpringIcon from "@/assets/icons/spring.svg";
+import SqlIcon from "@/assets/icons/database.svg";
 
 const toolboxItems = [
   {
     title: "JavaScript",
-    icon: "",
+    icon: <JavascriptIcon />,
   },
   {
     title: "HTML5",
-    icon: "",
+    icon: <HTMLIcon />,
   },
   {
     title: "CSS3",
-    icon: "",
+    icon: <CSSIcon />,
   },
   {
     title: "React",
-    icon: "",
+    icon: <ReactIcon />,
   },
   {
     title: "Java",
-    icon: "",
+    icon: <JavaIcon />,
   },
   {
     title: "Github",
-    icon: "",
+    icon: <GithubIcon />,
   },
   {
     title: "SpringBoot",
-    icon: "",
+    icon: <SpringIcon />,
   },
-]
-
+  {
+    title: "Banco de Dados",
+    icon: <SqlIcon />,
+  },
+];
 
 export const AboutSection = () => {
   return (
@@ -70,9 +73,7 @@ export const AboutSection = () => {
               projetos incríveis.
             </p>
           </div>
-          <div>
-
-          </div>
+          <div></div>
         </Card>
       </div>
     </div>
