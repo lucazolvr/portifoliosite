@@ -50,9 +50,40 @@ const toolboxItems = [
   },
 ];
 
+const hobbies = [
+  {
+    title: "Jogos",
+    emoji: "🕹️",
+  },
+  {
+    title: "Leitura",
+    emoji: "📚",
+  },
+  {
+    title: "Música",
+    emoji: "🎵",
+  },
+  {
+    title: "One Piece",
+    emoji: "👒",
+  },
+  {
+    title: "Formula 1",
+    emoji: "🏎️",
+  },
+  {
+    title: "Basquete",
+    emoji: "⛹️",
+  },
+  {
+    title: "Academia",
+    emoji: "🏋️‍♂️",
+  },
+];
+
 export const AboutSection = () => {
   return (
-    <div className="pb-96">
+    <div className="py-16">
       <SectionHeader
         eyebrow="Sobre mim"
         title="Uma Visão Do Meu Universo"
@@ -90,6 +121,14 @@ export const AboutSection = () => {
             <StarIcon />
             <h3>Além do Código</h3>
             <p>Explore meus interesses e hobbys além do universo de códigos.</p>
+          </div>
+          <div>
+            {hobbies.map((hobby) => (
+              <div key={hobby.title}>
+                <span>{hobby.title}</span>
+                <span>{hobby.emoji}</span>
+              </div>
+            ))}
           </div>
         </Card>
         <Card>
