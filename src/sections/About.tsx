@@ -14,6 +14,8 @@ import SqlIcon from "@/assets/icons/database.svg";
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/mapa.png";
 import smileMemoji from "@/assets/images/memoji-piscando.png";
+import { CardHeader } from "@/components/CardHeader";
+import { ToolboxItems } from "@/components/ToolboxItems";
 
 const toolboxItems = [
   {
@@ -83,58 +85,41 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-    <div className="py-16">
-      <SectionHeader
-        eyebrow="Sobre mim"
-        title="Uma Visão Do Meu Universo"
-        description="Saiba mais sobre mim, o que eu faço e o que me inspira"
-      />
-      <div>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>Minhas Leituras</h3>
-            <p>Explore os livros moldam meu conhecimento.</p>
-          </div>
-          <Image src={bookImage} alt="capa livro" />
-        </Card>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>Minhas Ferramentas</h3>
-            <p>
-              Explore as tecnologias e ferramentas que uso para desenvolver
-              projetos incríveis.
-            </p>
-          </div>
-          <div>
-            {toolboxItems.map((item) => (
-              <div key={item.title}>
-                <TechIcon component={item.iconType} />
-                <span>{item.title}</span>
-              </div>
-            ))}
-          </div>
-        </Card>
-        <Card>
-          <div>
-            <StarIcon />
-            <h3>Além do Código</h3>
-            <p>Explore meus interesses e hobbys além do universo de códigos.</p>
-          </div>
-          <div>
-            {hobbies.map((hobby) => (
-              <div key={hobby.title}>
-                <span>{hobby.title}</span>
-                <span>{hobby.emoji}</span>
-              </div>
-            ))}
-          </div>
-        </Card>
-        <Card>
-          <Image src={mapImage} alt="mapa" />
-          <Image src={smileMemoji} alt="Memoji Piscando" />
-        </Card>
+    <div className="py-15">
+      <div className="container">
+        <SectionHeader
+          eyebrow="Sobre mim"
+          title="Uma Visão Do Meu Universo"
+          description="Saiba mais sobre mim, o que eu faço e o que me inspira"
+        />
+        <div className="mt-20">
+          <Card className="h-[320px]">
+            <CardHeader title="Minhas Leituras" description="Explore os livros que moldam minhas habilidades." />
+            <div className="w-40 mx-auto mt-3">
+            <Image src={bookImage} alt="capa livro" />
+            </div>
+          </Card>
+          <Card className="h-[320px] p-0">
+          <CardHeader title="Minhas Skills" description="Explore as tecnologias e ferramentas que uso para desenvolver projetos incríveis." className="px-6 pt-6" />
+          <ToolboxItems items={toolboxItems} className="mt-6" />
+          <ToolboxItems items={toolboxItems} className="mt-6"/>
+          </Card>
+          <Card>
+          <CardHeader title="Além do Código" description="Explore meus interesses e hobbies além do universo de códigos." />
+            <div>
+              {hobbies.map((hobby) => (
+                <div key={hobby.title}>
+                  <span>{hobby.title}</span>
+                  <span>{hobby.emoji}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+          <Card>
+            <Image src={mapImage} alt="mapa" />
+            <Image src={smileMemoji} alt="Memoji Piscando" />
+          </Card>
+        </div>
       </div>
     </div>
   );
