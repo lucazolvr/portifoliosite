@@ -92,20 +92,34 @@ export const AboutSection = () => {
           title="Uma Visão Do Meu Universo"
           description="Saiba mais sobre mim, o que eu faço e o que me inspira"
         />
-        <div className="mt-20">
+        <div className="mt-20 flex flex-col gap-6">
           <Card className="h-[320px]">
-            <CardHeader title="Minhas Leituras" description="Explore os livros que moldam minhas habilidades." />
+            <CardHeader
+              title="Minhas Leituras"
+              description="Explore os livros que moldam minhas habilidades."
+            />
             <div className="w-40 mx-auto mt-3">
-            <Image src={bookImage} alt="capa livro" />
+              <Image src={bookImage} alt="capa livro" />
             </div>
           </Card>
           <Card className="h-[320px] p-0">
-          <CardHeader title="Minhas Skills" description="Explore as tecnologias e ferramentas que uso para desenvolver projetos incríveis." className="px-6 pt-6" />
-          <ToolboxItems items={toolboxItems} className="mt-6" />
-          <ToolboxItems items={toolboxItems} className="mt-6"/>
+            <CardHeader
+              title="Minhas Skills"
+              description="Explore as tecnologias e ferramentas que uso para desenvolver projetos incríveis."
+              className="px-6 pt-6"
+            />
+            <ToolboxItems items={toolboxItems} className="mt-6" />
+            <ToolboxItems
+              items={toolboxItems}
+              className="mt-6"
+              itemsWrapperClassName="-translate-x-1/2"
+            />
           </Card>
           <Card>
-          <CardHeader title="Além do Código" description="Explore meus interesses e hobbies além do universo de códigos." />
+            <CardHeader
+              title="Além do Código"
+              description="Explore meus interesses e hobbies além do universo de códigos."
+            />
             <div>
               {hobbies.map((hobby) => (
                 <div key={hobby.title}>
